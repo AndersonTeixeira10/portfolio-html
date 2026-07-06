@@ -2509,3 +2509,268 @@ section {
         padding-right: 0.5rem;
     }
 }
+
+/* =========================================================
+   CORREÇÕES MOBILE - PROJETOS
+   Mantém o desktop intacto
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Reduz a largura geral da seção de projetos no celular */
+    .projects-showcase {
+        width: 100%;
+        max-width: 100%;
+        gap: 0;
+    }
+
+    .project-feature-card {
+        width: 100%;
+        padding: 1.6rem;
+        border-radius: 2.4rem;
+        overflow: hidden;
+    }
+
+    .project-feature-info.active {
+        gap: 1.5rem;
+    }
+
+    /* Título dos projetos no mobile */
+    .project-feature-header {
+        max-width: 100%;
+    }
+
+    .project-kicker {
+        font-size: 1.05rem;
+        padding: 0.7rem 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .project-feature-info h3 {
+        font-size: 2.35rem;
+        line-height: 1.25;
+    }
+
+    /* Descrição dos projetos */
+    .project-feature-details {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project-feature-details p {
+        font-size: 1.42rem;
+        line-height: 1.8;
+        margin-bottom: 1.8rem;
+    }
+
+    /* Tags mais organizadas no celular */
+    .project-tags {
+        gap: 0.8rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .project-tags span {
+        font-size: 1.15rem;
+        padding: 0.65rem 1.15rem;
+    }
+
+    /* Botão em largura total */
+    .project-feature-details a {
+        width: 100%;
+        min-height: 5.4rem;
+        font-size: 1.4rem;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 0;
+    }
+
+    /* Corrige contador 1/6, 2/6 etc.
+       Sai de cima do botão e vira um elemento normal abaixo */
+    .project-card-counter {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        display: block;
+        width: 100%;
+        margin-top: 0.8rem;
+        text-align: center;
+        font-size: 2.2rem !important;
+        line-height: 1;
+        opacity: 0.85;
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+/* =========================================================
+   CORREÇÃO MOBILE - POWER BI
+   Resolve relatório pequeno e faixa branca inferior
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Área dos projetos Power BI 1 e 2 */
+    .project-feature-info[data-project="0"] .project-feature-media,
+    .project-feature-info[data-project="1"] .project-feature-media {
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 16 / 9;
+        border-radius: 2rem;
+        background: #03140d;
+    }
+
+    .project-feature-info[data-project="0"] .project-preview-bi,
+    .project-feature-info[data-project="1"] .project-preview-bi {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        overflow: hidden;
+        background: #03140d;
+    }
+
+    .project-feature-info[data-project="0"] .project-preview-bi iframe,
+    .project-feature-info[data-project="1"] .project-preview-bi iframe {
+        position: absolute;
+        inset: 0;
+        width: 100% !important;
+        height: 100% !important;
+        border: none;
+        display: block;
+        background: #03140d;
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   CORREÇÃO MOBILE - PROJETO 6 / GESTÃO DE DADOS
+   Versão mais limpa apenas para celular
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Card visual do projeto Gestão de Dados */
+    .project-feature-info[data-project="5"] .project-feature-media {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible;
+        border-radius: 2rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-preview {
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 1.2rem;
+        gap: 1rem;
+        overflow: hidden;
+        border-radius: 1.8rem;
+    }
+
+    /* Cabeçalho mais compacto */
+    .project-feature-info[data-project="5"] .sql-clean-header {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-header span {
+        font-size: 0.8rem;
+        letter-spacing: 0.14rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-header h4 {
+        font-size: 1.45rem;
+        line-height: 1.25;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-header i {
+        width: 4rem;
+        height: 4rem;
+        min-width: 4rem;
+        font-size: 2.1rem;
+    }
+
+    /* Tabelas uma abaixo da outra */
+    .project-feature-info[data-project="5"] .sql-source-tables {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-source-card {
+        border-radius: 1.2rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-source-title {
+        padding: 0.7rem 0.8rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-source-title strong,
+    .project-feature-info[data-project="5"] .sql-source-title span {
+        font-size: 0.85rem;
+    }
+
+    /* Linhas mais legíveis */
+    .project-feature-info[data-project="5"] .sql-mini-row span {
+        font-size: 0.72rem;
+        padding: 0.48rem 0.5rem;
+        line-height: 1.25;
+    }
+
+    .project-feature-info[data-project="5"] .sql-mini-head span {
+        font-size: 0.68rem;
+    }
+
+    /* No mobile, esconde query/resultado e fluxo para não quebrar */
+    .project-feature-info[data-project="5"] .sql-clean-display,
+    .project-feature-info[data-project="5"] .sql-clean-flow {
+        display: none !important;
+    }
+
+    /* Ajuste fino das colunas no mobile */
+    .project-feature-info[data-project="5"] .empresa-row {
+        grid-template-columns: 0.55fr 1fr 1.05fr !important;
+    }
+
+    .project-feature-info[data-project="5"] .gastos-row,
+    .project-feature-info[data-project="5"] .sql-source-card:nth-child(2) .sql-mini-row {
+        grid-template-columns: 1.35fr 0.7fr 0.5fr !important;
+    }
+}
+
+/* =========================================================
+   AJUSTES EXTRAS PARA CELULARES MENORES
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .project-feature-card {
+        padding: 1.4rem;
+        border-radius: 2.2rem;
+    }
+
+    .project-feature-info h3 {
+        font-size: 2.15rem;
+    }
+
+    .project-feature-details p {
+        font-size: 1.38rem;
+        line-height: 1.75;
+    }
+
+    .project-feature-info[data-project="0"] .project-feature-media,
+    .project-feature-info[data-project="1"] .project-feature-media {
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-preview {
+        padding: 1rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-mini-row span {
+        font-size: 0.68rem;
+        padding: 0.42rem 0.45rem;
+    }
+
+    .project-card-counter {
+        font-size: 2rem !important;
+        margin-top: 0.7rem;
+    }
+}
