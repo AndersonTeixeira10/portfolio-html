@@ -2774,3 +2774,142 @@ section {
         margin-top: 0.7rem;
     }
 }
+
+/* =========================================================
+   AJUSTE FINAL MOBILE - POWER BI E GESTÃO DE DADOS
+   Manter desktop intacto
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* ==============================
+       POWER BI MOBILE - REATIVAR PREVIEW
+    ============================== */
+
+    .project-feature-info[data-project="0"] .project-feature-media,
+    .project-feature-info[data-project="1"] .project-feature-media {
+        height: 300px !important;
+        min-height: 300px !important;
+        aspect-ratio: auto !important;
+        overflow: hidden !important;
+        border-radius: 2rem;
+        background: #03140d;
+    }
+
+    .project-feature-info[data-project="0"] .project-preview-bi,
+    .project-feature-info[data-project="1"] .project-preview-bi {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: inherit;
+        background: #03140d;
+    }
+
+    .project-feature-info[data-project="0"] .project-preview-bi iframe,
+    .project-feature-info[data-project="1"] .project-preview-bi iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: calc(100% + 64px) !important;
+        border: none !important;
+        display: block !important;
+        background: #03140d !important;
+        transform: none !important;
+    }
+
+
+    /* ==============================
+       GESTÃO DE DADOS MOBILE
+       Mostrar bases + consulta/resultado
+    ============================== */
+
+    .project-feature-info[data-project="5"] .project-feature-media {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        border-radius: 2rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-preview {
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 1.1rem;
+        gap: 0.9rem;
+        overflow: hidden;
+        border-radius: 1.8rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-source-tables {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-display {
+        display: block !important;
+        min-height: 185px;
+        height: 185px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .project-feature-info[data-project="5"] .sql-view {
+        height: 100%;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-code {
+        height: 100%;
+        overflow: auto;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-code pre {
+        font-size: 0.78rem;
+        line-height: 1.35;
+        padding: 0.8rem;
+        overflow: auto;
+        white-space: pre;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-result {
+        height: 100%;
+        overflow: auto;
+    }
+
+    .project-feature-info[data-project="5"] .sql-result-title {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-result-row {
+        grid-template-columns: 0.9fr 1.35fr 0.65fr;
+    }
+
+    .project-feature-info[data-project="5"] .sql-result-row span {
+        font-size: 0.72rem;
+        padding: 0.48rem 0.5rem;
+        line-height: 1.25;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-flow {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-flow div {
+        padding: 0.7rem 0.6rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-flow strong {
+        font-size: 1rem;
+    }
+
+    .project-feature-info[data-project="5"] .sql-clean-flow span {
+        font-size: 0.75rem;
+    }
+}
+
