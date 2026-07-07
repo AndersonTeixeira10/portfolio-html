@@ -2603,45 +2603,6 @@ section {
 }
 
 /* =========================================================
-   CORREÇÃO MOBILE - POWER BI
-   Resolve relatório pequeno e faixa branca inferior
-========================================================= */
-
-@media screen and (max-width: 768px) {
-
-    /* Área dos projetos Power BI 1 e 2 */
-    .project-feature-info[data-project="0"] .project-feature-media,
-    .project-feature-info[data-project="1"] .project-feature-media {
-        height: auto !important;
-        min-height: 0 !important;
-        aspect-ratio: 16 / 9;
-        border-radius: 2rem;
-        background: #03140d;
-    }
-
-    .project-feature-info[data-project="0"] .project-preview-bi,
-    .project-feature-info[data-project="1"] .project-preview-bi {
-        width: 100%;
-        height: 100%;
-        border-radius: inherit;
-        overflow: hidden;
-        background: #03140d;
-    }
-
-    .project-feature-info[data-project="0"] .project-preview-bi iframe,
-    .project-feature-info[data-project="1"] .project-preview-bi iframe {
-        position: absolute;
-        inset: 0;
-        width: 100% !important;
-        height: 100% !important;
-        border: none;
-        display: block;
-        background: #03140d;
-        transform: none !important;
-    }
-}
-
-/* =========================================================
    CORREÇÃO MOBILE - PROJETO 6 / GESTÃO DE DADOS
    Versão mais limpa apenas para celular
 ========================================================= */
@@ -2783,44 +2744,6 @@ section {
 @media screen and (max-width: 768px) {
 
     /* ==============================
-       POWER BI MOBILE - REATIVAR PREVIEW
-    ============================== */
-
-    .project-feature-info[data-project="0"] .project-feature-media,
-    .project-feature-info[data-project="1"] .project-feature-media {
-        height: 300px !important;
-        min-height: 300px !important;
-        aspect-ratio: auto !important;
-        overflow: hidden !important;
-        border-radius: 2rem;
-        background: #03140d;
-    }
-
-    .project-feature-info[data-project="0"] .project-preview-bi,
-    .project-feature-info[data-project="1"] .project-preview-bi {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        border-radius: inherit;
-        background: #03140d;
-    }
-
-    .project-feature-info[data-project="0"] .project-preview-bi iframe,
-    .project-feature-info[data-project="1"] .project-preview-bi iframe {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: calc(100% + 64px) !important;
-        border: none !important;
-        display: block !important;
-        background: #03140d !important;
-        transform: none !important;
-    }
-
-
-    /* ==============================
        GESTÃO DE DADOS MOBILE
        Mostrar bases + consulta/resultado
     ============================== */
@@ -2910,6 +2833,70 @@ section {
 
     .project-feature-info[data-project="5"] .sql-clean-flow span {
         font-size: 0.75rem;
+    }
+}
+
+/* =========================================================
+   CORREÇÃO DEFINITIVA MOBILE - POWER BI 1 E 2
+   Não altera desktop e não mexe no projeto 6
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .project-feature-info[data-project="0"] .project-feature-media,
+    .project-feature-info[data-project="1"] .project-feature-media {
+        height: 360px !important;
+        min-height: 360px !important;
+        max-height: 360px !important;
+        aspect-ratio: unset !important;
+        overflow: hidden !important;
+        position: relative !important;
+        border-radius: 2rem;
+        background: #03140d;
+    }
+
+    .project-feature-info[data-project="0"] .project-preview-bi,
+    .project-feature-info[data-project="1"] .project-preview-bi {
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important;
+        overflow: hidden !important;
+        border-radius: inherit;
+        background: #03140d;
+    }
+
+    .project-feature-info[data-project="0"] .project-preview-bi iframe,
+    .project-feature-info[data-project="1"] .project-preview-bi iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 420px !important;
+        min-height: 420px !important;
+        border: 0 !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: transparent !important;
+        z-index: 5 !important;
+        transform: translateZ(0) !important;
+        -webkit-transform: translateZ(0) !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .project-feature-info[data-project="0"] .project-feature-media,
+    .project-feature-info[data-project="1"] .project-feature-media {
+        height: 340px !important;
+        min-height: 340px !important;
+        max-height: 340px !important;
+    }
+
+    .project-feature-info[data-project="0"] .project-preview-bi iframe,
+    .project-feature-info[data-project="1"] .project-preview-bi iframe {
+        height: 400px !important;
+        min-height: 400px !important;
     }
 }
 
